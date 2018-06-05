@@ -19,19 +19,19 @@ def TryLogin(account,password):
     #else:
         #print('failed')
 #print(FeedBack.get_text())
-
-f1=open('IDToken1.txt')
-count=0
-for line1 in f1.readlines():
-    account = line1.strip('\n')  # 调用strip()删除行尾空格
-    f2 = open('IDToken2.txt')
-    for line2 in f2.readlines():
-        password=line2.strip('\n')
-        #print(account)
-        TryLogin(account,password)
-        count+=1
-        if count%100==0:
-            print(count)
-        #print(password)
-    f2.close()
-f1.close()
+def main():
+    f1=open('IDToken1.txt')
+    count=0
+    for line1 in f1.readlines():
+        account = line1.strip('\n')  # 调用strip()删除行尾空格
+        f2 = open('IDToken2.txt')
+        for line2 in f2.readlines():
+            password=line2.strip('\n')
+            #print(account)
+            TryLogin(account,password)
+            count+=1
+            if count%100==0:
+                print(count)
+            #print(password)
+        f2.close()
+    f1.close()  
