@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
-url='http://ids.usst.edu.cn/amserver/UI/Login'                  #为了同学信息安全，上传版本的链接已移除
+url='http://xxx/Login'                  #为了同学信息安全，上传版本的链接已移除
  
 multi = Celery('task1',  backend='redis://localhost:6379/0', broker='redis://localhost:6379/0')
 
